@@ -34,3 +34,9 @@ p {
 #links {
     opacity: 0.2;
 }
+
+@media screen and (max-width: 480px) {
+    body {
+      align-items: flex-start;
+    }
+  }
