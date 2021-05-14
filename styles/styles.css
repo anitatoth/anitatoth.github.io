@@ -1,0 +1,36 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+  height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(101, 163, 172);
+}
+#info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.item {
+    font-size: 125px;
+    color: white;
+    display: inline-block;
+
+    opacity: 0.3;
+    font-family: 'FSEX300';
+}
+p {
+    font-size: 70px;
+    opacity: 0.5;
+}
+
+#links {
+    opacity: 0.2;
+}
