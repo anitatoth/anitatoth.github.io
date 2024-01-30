@@ -8,7 +8,154 @@
     <meta name="theme-color" content="#000000">
   </head>
   <body>
-    <div id="info">
+    <nav>
+      <a href="#">
+        <p>Anita's Site<br />Software Engineer</p>
+      </a>
+    </nav>
+    <footer>
+      <div class="socials">
+        <a href="#">IG</a>
+        <a href="#">NM</a>
+        <a href="#">PI</a>
+        <a href="#">HJ</a>
+        <a href="#">MAIL</a>
+      </div>
+      <div class="ctas">
+        <buton>Live Site</buton>
+        <buton>Buy Now</buton>
+      </div>
+    </footer>
+
+    <div class="item project-1">
+      <div class="cube-container">
+        <div class="cube">
+          <div class="side front"></div>
+          <div class="side back"></div>
+          <div class="side top"></div>
+          <div class="side bottom"></div>
+        </div>
+        <div class="cube" style="left: 50%" >
+          <div class="side front"><img src="./assets/img1.png" /></div>
+          <div class="side back"><img src="./assets/img1.png" /></div>
+          <div class="side top"><img src="./assets/img1.png" /> </div>
+          <div class="side bottom"><img src="./assets/img1.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="item project-2">
+      <div class="cube-container">
+        <div class="cube">
+          <div class="side front"></div>
+          <div class="side back"></div>
+          <div class="side top"></div>
+          <div class="side bottom"></div>
+        </div>
+        <div class="cube" style="left: 50%" >
+          <div class="side front"><img src="./assets/img1.png" /></div>
+          <div class="side back"><img src="./assets/img1.png" /></div>
+          <div class="side top"><img src="./assets/img1.png" /> </div>
+          <div class="side bottom"><img src="./assets/img1.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="item project-3">
+      <div class="cube-container">
+        <div class="cube">
+          <div class="side front"></div>
+          <div class="side back"></div>
+          <div class="side top"></div>
+          <div class="side bottom"></div>
+        </div>
+        <div class="cube" style="left: 50%" >
+          <div class="side front"><img src="./assets/img1.png" /></div>
+          <div class="side back"><img src="./assets/img1.png" /></div>
+          <div class="side top"><img src="./assets/img1.png" /> </div>
+          <div class="side bottom"><img src="./assets/img1.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="item project-4">
+      <div class="cube-container">
+        <div class="cube">
+          <div class="side front"></div>
+          <div class="side back"></div>
+          <div class="side top"></div>
+          <div class="side bottom"></div>
+        </div>
+        <div class="cube" style="left: 50%" >
+          <div class="side front"><img src="./assets/email.png" /></div>
+          <div class="side back"><img src="./assets/github.png" /></div>
+          <div class="side top"><img src="./assets/linkedin.png" /> </div>
+          <div class="side bottom"><img src="./assets/twittericon.png" /></div>
+        </div>
+      </div>
+    </div>
+    <div style="height: 100px"></div>
+    <script>
+      const cubeContainers = document.querySelectorAll(".cube-container")
+      const items = document.querySelectorAll(".item")
+      const projectNames = ['clark', 'bingo', 'vertex', 'linear']
+
+      function updateCubes(scrolly) {
+        const yRotation = (scrolly/2) % 360
+        const scrollOffSet = scrolly * 0.25
+
+        cubeContainers.forEach((container, containerIndex) => {
+          const cubes = container.querySelectorAll(".cube")
+
+          cubes.forEach((cube, cubeIndex) => {
+            let rotationDirection = cubeIndex % 2 === 0 ? 1 : -1
+            cube.style.transform = `translateZ(100px) rotateX(${yRotation * rotationDirection}deg)`
+          })
+            const frontBackTextPosition = 50 + scrollOffSet
+            const topBottomTextPosition = 50 - scrollOffSet
+
+            container.querySelectorAll(".front p, .back p").forEach(p=> {
+              p.style.left = `${frontBackTextPosition}%`
+            })
+
+            container.querySelectorAll(".top p, .bottom p").forEach(p=> {
+              p.style.left = `${topBottomTextPosition}%`
+            })
+
+       
+        })
+      }
+
+      function populateText() {
+        items.forEach((item, itemIndex) => {
+          const projectName = projectNames[itemIndex % projectNames.length]
+          const sides = item.querySelectorAll(".side p")
+          const textContent = Array(50).fill(projectName).join("&nbsp;&nbsp;&nbsp;&nbsp;")
+
+          sides.forEach(side => {
+            side.innerHTML = textContent
+          })
+        })
+      }
+
+      window.onload = function() {
+        populateText()
+        updateCubes(window.scrolly)
+      }
+
+      let ticking = false
+      document.addEventListener("scroll", function(e) {
+        if(!ticking) {
+          window.requestAnimationFrame(function() {
+            updateCubes(window.scrollY)
+            ticking = false
+          })
+
+          ticking = true
+        }
+      })
+    </script>
+
+
+
+    <!-- <div id="info">
         <div class="item">
           Anita Toth
           <p>Full-Stack Web Developer</p>
@@ -17,12 +164,12 @@
         <div id="links">
             <a href="https://www.linkedin.com/in/anita-toth-09991723/"><img src="assets/linkedin.png" alt="linkedin"></a>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/anitatoth"><img src="assets/github.png" alt="github"></a> 
+            <a href="https://github.com/anitatoth"><img src="assets/github.png" alt="github"></a>  -->
             <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="https://twitter.com/AnitaInTheWild"><img src="assets/twittericon.png" alt="twitter" ></a>   -->
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="mailto:anitatoth978@gmail.com"><img src="assets/email.png" alt="email"></a>
         </div>
-    </div>
+    </div> -->
   </body>
 </html>
