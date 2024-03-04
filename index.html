@@ -124,6 +124,8 @@
       }
 
       function populateText() {
+        console.log("items", items)
+        console.log("projectNames", projectNames)
         items.forEach((item, itemIndex) => {
           const projectName = projectNames[itemIndex % projectNames.length]
           const sides = item.querySelectorAll(".side p")
