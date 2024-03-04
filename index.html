@@ -130,7 +130,10 @@
           const projectName = projectNames[itemIndex % projectNames.length]
           const sides = item.querySelectorAll(".side p")
           const textContent = Array(50).fill(projectName).join("&nbsp;&nbsp;&nbsp;&nbsp;")
-
+          console.log("item", item)
+          console.log("itemIndex", itemIndex)
+          console.log("projectName", projectName)
+          console.log("textContent", textContent)
           sides.forEach(side => {
             side.innerHTML = textContent
           })
