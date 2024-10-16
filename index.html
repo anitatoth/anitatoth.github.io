@@ -1,185 +1,30 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anita Toth</title>
+    <title>Anita Toth - Software Developer</title>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="styles/styles.css">
-    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
   </head>
   <body>
-    <nav>
-      <a href="#">
-        <p>Anita Toth<br />Software Engineer</p>
-      </a>
-    </nav>
-    <!-- <footer>
-      <div class="socials"> -->
-        <!-- <a href="https://github.com/anitatoth"><img src="./assets/github.png" alt="Github logo" style="width:42px;height:42px;"></a> -->
-        <!-- <a href="https://drive.google.com/file/d/17QjuU8BvpxIyqAgHdXOQ6x5V82O3E7qk/view?usp=sharing">Resume</a>
-        <a href="https://github.com/anitatoth">Github</a>
-        <a href="https://www.linkedin.com/in/anita-t-software-developer/">LinkedIn</a>
-        <a href="mailto:anitatoth.ca@gmail.com">Contact</a>
-      </div> -->
-      <!-- <div class="ctas">
-        <buton>Live Site</buton>
-        <buton>Buy Now</buton>
-      </div> -->
-    <!-- </footer> -->
-
-    <div class="item project-1">
-      <div class="cube-container">
-        <div class="cube">
-   
-          <div class="side front"><img src="./assets/Hello4.jpg" /></div>
-          <div class="side back"><img src="./assets/Hello4.jpg" /></div>
-          <div class="side top"><img src="./assets/Hello4.jpg" /> </div>
-          <div class="side bottom"><img src="./assets/Hello4.jpg" /></div>
-        </div>
-        <div class="cube" style="left: 50%" >
-          <div class="side front"></div>
-          <div class="side back"></div>
-          <div class="side top"></div>
-          <div class="side bottom"></div>
-          <!-- <div class="side front">I'm Anita</div>
-          <div class="side back">"I'm a software engineer"</div>
-          <div class="side top">I'm in Vancouver, BC</div>
-          <div class="side bottom">Please scroll down to get to know me more</div> -->
-        </div>
+    <div class="nav">
+      <div>
+        <h2 class="name">Anita Toth | Software Developer</h2>
+      </div>
+      <div class="connect">
+        <h2><a href="mailto:anitatoth.ca@gmail.com">Contact</a></h2>
+        <h2><a href="https://github.com/anitatoth/">Github</a></h2>
+        <h2><a href="https://www.linkedin.com/in/anita-t-software-developer/">LinkedIn</a><h2>
       </div>
     </div>
-    <div class="item project-2">
-      <div class="cube-container">
-        <div class="cube">
-          <div class="side front"><img src="./assets/linkedin1.jpg" /></div>
-          <div class="side back"><img src="./assets/linkedin1.jpg" /></div>
-          <div class="side top"><img src="./assets/linkedin1.jpg" /> </div>
-          <div class="side bottom"><img src="./assets/linkedin1.jpg" /></div>
-        </div>
-        <div class="cube" style="left: 50%" >
-          <div class="side front"><img src="./assets/img1.png" /></div>
-          <div class="side back"><img src="./assets/img1.png" /></div>
-          <div class="side top"><img src="./assets/img1.png" /> </div>
-          <div class="side bottom"><img src="./assets/img1.png" /></div>
-        </div>
-      </div>
+    <div class="content">
+      <h1>Hi, I'm Anita. <br> I am a software developer from Vancouver, Canada. </h1>
     </div>
-    <div class="item project-3">
-      <div class="cube-container">
-        <div class="cube">
-          <div class="side front"><img src="./assets/github1.jpg" /></div>
-          <div class="side back"><img src="./assets/github1.jpg" /></div>
-          <div class="side top"><img src="./assets/github1.jpg" /> </div>
-          <div class="side bottom"><img src="./assets/github1.jpg" /></div>
-        </div>
-        <div class="cube" style="left: 50%" >
-          <div class="side front"><img src="./assets/img1.png" /></div>
-          <div class="side back"><img src="./assets/img1.png" /></div>
-          <div class="side top"><img src="./assets/img1.png" /> </div>
-          <div class="side bottom"><img src="./assets/img1.png" /></div>
-        </div>
-      </div>
-    </div>
-    <div class="item project-4">
-      <div class="cube-container">
-        <div class="cube">
-          <div class="side front"><img src="./assets/email1.jpg" /></div>
-          <div class="side back"><img src="./assets/email1.jpg" /></div>
-          <div class="side top"><img src="./assets/email1.jpg" /> </div>
-          <div class="side bottom"><img src="./assets/email1.jpg" /></div>
-        </div>
-        <div class="cube" style="left: 50%" >
-          <div class="side front"><img src="./assets/email.png" /></div>
-          <div class="side back"><img src="./assets/github.png" /></div>
-          <div class="side top"><img src="./assets/linkedin.png" /> </div>
-          <div class="side bottom"><img src="./assets/twittericon.png" /></div>
-        </div>
-      </div>
-    </div>
-    <div style="height: 100px"></div>
-    <script>
-      const cubeContainers = document.querySelectorAll(".cube-container")
-      const items = document.querySelectorAll(".item")
-      const projectNames = ['Contact', 'LinkedIn', 'Resume', 'Github']
-
-      function updateCubes(scrolly) {
-        const yRotation = (scrolly/2) % 360
-        const scrollOffSet = scrolly * 0.25
-
-        cubeContainers.forEach((container, containerIndex) => {
-          const cubes = container.querySelectorAll(".cube")
-
-          cubes.forEach((cube, cubeIndex) => {
-            let rotationDirection = cubeIndex % 2 === 0 ? 1 : -1
-            cube.style.transform = `translateZ(100px) rotateX(${yRotation * rotationDirection}deg)`
-          })
-            const frontBackTextPosition = 50 + scrollOffSet
-            const topBottomTextPosition = 50 - scrollOffSet
-
-            container.querySelectorAll(".front p, .back p").forEach(p=> {
-              p.style.left = `${frontBackTextPosition}%`
-            })
-
-            container.querySelectorAll(".top p, .bottom p").forEach(p=> {
-              p.style.left = `${topBottomTextPosition}%`
-            })
-
-       
-        })
-      }
-
-      function populateText() {
-        console.log("items", items)
-        console.log("projectNames", projectNames)
-        items.forEach((item, itemIndex) => {
-          const projectName = projectNames[itemIndex % projectNames.length]
-          const sides = item.querySelectorAll(".side p")
-          const textContent = Array(50).fill(projectName).join("&nbsp;&nbsp;&nbsp;&nbsp;")
-          console.log("item", item)
-          console.log("itemIndex", itemIndex)
-          console.log("projectName", projectName)
-          console.log("textContent", textContent)
-          sides.forEach(side => {
-            side.innerHTML = textContent
-          })
-        })
-      }
-
-      window.onload = function() {
-        populateText()
-        updateCubes(window.scrolly)
-      }
-
-      let ticking = false
-      document.addEventListener("scroll", function(e) {
-        if(!ticking) {
-          window.requestAnimationFrame(function() {
-            updateCubes(window.scrollY)
-            ticking = false
-          })
-
-          ticking = true
-        }
-      })
-    </script>
-
-
-
-    <!-- <div id="info">
-        <div class="item">
-          Anita Toth
-          <p>Full-Stack Web Developer</p>
-        </div>
-        <br>
-        <div id="links">
-            <a href="https://www.linkedin.com/in/anita-toth-09991723/"><img src="assets/linkedin.png" alt="linkedin"></a>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/anitatoth"><img src="assets/github.png" alt="github"></a>  -->
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://twitter.com/AnitaInTheWild"><img src="assets/twittericon.png" alt="twitter" ></a>   -->
-            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="mailto:anitatoth978@gmail.com"><img src="assets/email.png" alt="email"></a>
-        </div>
-    </div> -->
-  </body>
 </html>
+
+
