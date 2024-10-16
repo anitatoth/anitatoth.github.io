@@ -48,10 +48,11 @@ h2 {
   display: flex;
   justify-content: space-between;
   top: 0;
-  padding: 10px 16px;
+  padding: 10px 15px;
 }
 
 .name {
+  padding: 10px 20px;
   background: linear-gradient(90deg, white, #333, white);
   background-size: 200%;
   color: transparent;
@@ -72,7 +73,7 @@ h2 {
 .connect {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 15px;
 }
 
 a {
@@ -92,4 +93,20 @@ a {
   flex: 1;
   justify-content: center;
   align-items: center;
+  padding: 10px 35px;
+}
+
+/* Responsive layout*/
+@media (max-width: 900px) {
+  .nav {
+    padding: 20px;
+  }
+
+  .connect {
+    flex-direction: column;
+  }
+
+  h2 {
+    margin: 0;
+  }
 }
