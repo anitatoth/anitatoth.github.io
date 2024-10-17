@@ -82,6 +82,7 @@ a {
 }
 
 .content {
+  overflow-y: auto;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -89,7 +90,7 @@ a {
   flex-direction: column;
   padding: 10px 35px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.75rem;
   font-family: "Chivo", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -107,7 +108,7 @@ span {
 .intro {
   padding-bottom: 10px;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 2.75rem;
 }
 
 .rocket {
@@ -125,7 +126,7 @@ span {
   height: 2rem;
 }
 
-/* Responsive layout*/
+/* Responsive layouts*/
 @media (max-width: 900px) {
   .nav {
     padding: 20px;
@@ -137,5 +138,24 @@ span {
 
   h2 {
     margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 230px 0 50px;
+    font-size: 1.5rem;
+    font-weight: 200;
+    overflow-y: auto;
+  }
+  .intro {
+    font-weight: 400;
+    font-size: 2rem;
   }
 }
