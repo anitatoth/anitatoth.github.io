@@ -9,18 +9,11 @@ body {
   background: linear-gradient(120deg, #0d1b2a, #1b263b, #415a77);
 }
 
-h1 {
-  font-family: "Chivo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
 h2 {
   font-family: "Rubik", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
   font-style: normal;
+  font-weight: 300;
 }
 
 .star {
@@ -93,7 +86,43 @@ a {
   flex: 1;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 10px 35px;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+p {
+  width: 60%;
+}
+
+span {
+  display: inline-block;
+}
+
+.intro {
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.rocket {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  /* background-color: cadetblue; */
+  border: ridge #FAFAD2;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.icon-email {
+  height: 2rem;
 }
 
 /* Responsive layout*/
